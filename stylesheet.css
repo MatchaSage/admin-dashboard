@@ -10,7 +10,8 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
     min-height: inherit;
 }
 
@@ -55,16 +56,50 @@ body {
 
 .main.container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr 1fr;
+    padding: 50px 30px 50px 30px;
+    background-color: #e2e8f0;
 }
 
+.main.container, .cards.parent {
+    gap: 40px;
+}
+
+.main.left{ 
+   display: grid;
+   grid-template-rows: 1fr 15fr;
+}
 .cards.parent {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 10px;
 }
 
 .cards.parent > .card {
     border: 2px solid red;
-    height: 200px;
+    height: 250px;
+}
+
+.main.right {
+    display: grid;
+    gap: 15px;
+}
+
+.main.right > .card.container {
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+.trending.container {
+    display: grid;
+}
+
+.trending.container {
+    border: 2px solid green;
+}
+
+.announcement.card.container {
+    display: grid;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 30px 30px 30px;
 }
