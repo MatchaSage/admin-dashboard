@@ -48,9 +48,17 @@ body {
 .sidebar > a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
     font-weight: 600;
     font-size: 1.3rem;
+}
+
+a[href=dashboard] {
+    padding-top: 10px;
+    font-size: 1.8rem;
+    padding-left: 70px;
+    background-image: url(./icons/dashboard-image.svg);
+    background-repeat: no-repeat;
+    background-size: 70px;
 }
 
 .header {
@@ -101,14 +109,51 @@ body {
    display: grid;
    grid-template-rows: 1fr 15fr;
 }
+
+.main.left h4, .card.container h4, .main.right h4{
+    font-size: 1.2rem;
+    font-family: var(--default-font);
+}
+
 .cards.parent {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: .1fr .1fr;
 }
 
 .cards.parent > .card {
-    border: 2px solid red;
+    border-radius: 15px;
     height: 250px;
+    background-color: #ffffff;
+    display: grid;
+    padding-left: 30px;
+    padding-top: 30px;
+    box-shadow: 0px 4px  rgb(206, 206, 206);
+    grid-template-rows: 1fr .5fr;
+    border-left: 15px solid rgb(194, 0, 0);
+}
+
+.cards.parent > .card > p {
+    max-width: 350px;
+    font-size: 1.1rem;
+    font-family: var(--default-font);
+    color: rgb(77, 77, 77);
+}
+
+.card.icons {
+    justify-content: end;
+    padding-left: 180px;
+}
+
+.card.icon {
+    width: 35px;
+}
+
+.card.title {
+    font-family: var(--default-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
 }
 
 .main.right {
@@ -123,17 +168,56 @@ body {
 
 .trending.container {
     display: grid;
+    background-color: #ffffff;
+    display: grid;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+    gap: 10px;
 }
 
-.trending.container {
-    border: 2px solid green;
+.trending.card img {
+    width: 50px;
+}
+
+.trending.card {
+    padding-left: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.handle {
+    font-weight: 600;
+    font-family: var(--default-font);
+}
+
+.trending.card > .container > p {
+    font-family: var(--default-font);
 }
 
 .announcement.card.container {
     display: grid;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 30px 30px 30px 30px;
+    padding: 10px 30px 10px 30px;
+}
+
+.announcement.card {
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.announcement > .title {
+    font-family: var(--default-font);
+    font-weight: 600;
+    font-size: 1rem;
+    color: black;
+}
+
+.announcement p{
+    color: #4d4d4d;
+    font-family: var(--default-font);
+    font-size: .9rem;
 }
 
 a[href=home] {
@@ -241,6 +325,7 @@ div .icons{
 }
 div .icons > p {
     font-size: 1.1rem;
+    font-weight: 600;
     font-family: var(--default-font);
 }
 
