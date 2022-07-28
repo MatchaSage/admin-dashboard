@@ -55,24 +55,35 @@ body {
 
 .header {
     display: grid;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px 10px 20px;
 }
 
 .header.top {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 6fr 1fr;
     align-items: center;
 }
 
 .header.bottom {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 5fr 1fr
 }
 
 .header.buttons {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    align-self: end;
+}
+
+.header.buttons button {
+    border-radius: 30px;
+    border-style: none;
+    background-color: #1992d4;
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: var(--default-font);
+    width: 100px;
+    height: 36px;
 }
 
 .main.container {
@@ -207,11 +218,52 @@ input[type=text] {
     font-size: 1.3rem;
 }
 
-.search.icon {
-    width: 30px;
+.search.icon, .notification.icon {
+    width: 25px;
 }
 
 .search.container {
     display: grid;
     grid-template-columns: 1fr 20fr;
+}
+
+div .icons{
+    display: grid;
+    align-items: center;
+    justify-items: end;
+    grid-template-columns: .2fr .2fr auto;
+    gap: 10px;
+}
+
+.profile.icon {
+    width: 40px;
+    height: 40px;
+}
+div .icons > p {
+    font-size: 1.1rem;
+    font-family: var(--default-font);
+}
+
+.header.greeting {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 20px;
+}
+
+.greeting.icon {
+    width: 60px;
+    height: 60px;
+}
+
+.greeting.text {
+    font-size: .8rem;
+    font-family: var(--default-font);
+    font-weight: 600;
+}
+
+.header.greeting p {
+    font-size: 1.2rem;
+    font-family: var(--default-font);
+    font-weight: 600;
 }
